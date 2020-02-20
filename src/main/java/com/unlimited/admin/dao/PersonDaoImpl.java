@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.unlimited.admin.base.PersonGeneralInformation;
+import com.unlimited.admin.model.PersonDetails;
 import com.unlimited.admin.repository.PersonRepository;
 
 public class PersonDaoImpl implements PersonDao {
@@ -15,19 +15,19 @@ public class PersonDaoImpl implements PersonDao {
 	PersonRepository personRepository;
 
 	@Override
-	public void save(PersonGeneralInformation personDetails) {
+	public void save(PersonDetails personDetails) {
 		personRepository.save(personDetails);
 	}
 
 	@Override
-	public PersonGeneralInformation getPersonById(Integer id) {
+	public PersonDetails getPersonById(Integer id) {
 		return personRepository.findById(id).get();
 	}
 
 	@Override
-	public Map<String, List<PersonGeneralInformation>> getAll() {
-		Map<String,List<PersonGeneralInformation>> map=new HashMap<String, List<PersonGeneralInformation>>();
-		List<PersonGeneralInformation> allPersons=personRepository.findAll();
+	public Map<String, List<PersonDetails>> getAll() {
+		Map<String,List<PersonDetails>> map=new HashMap<String, List<PersonDetails>>();
+		List<PersonDetails> allPersons=personRepository.findAll();
 		map.getOrDefault("list", allPersons);
 		return map;
 	}

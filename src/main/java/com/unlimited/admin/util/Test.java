@@ -6,7 +6,7 @@ public class Test {
 	
 	
 	public static void main(String[] args) {
-	DataOperator operator=new DataCopier();
+	DataOperator operator=new DataReaderSaver();
 	operator.executeAction();
 	System.out.println("Completed");
 		

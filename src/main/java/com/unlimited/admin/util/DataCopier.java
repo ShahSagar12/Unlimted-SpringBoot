@@ -25,7 +25,7 @@ public class DataCopier extends DataOperator{
 				while ((buffer=reader.readLine()) != null) {
 					String[] token=buffer.split(",");
 					if(token[1]!=null) {
-			            printStream.println(buffer+"\n");
+			            printStream.println(buffer);
 					}   
 			        }
 					printStream.close();
