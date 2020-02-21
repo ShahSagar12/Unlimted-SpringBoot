@@ -7,5 +7,6 @@ import com.unlimited.admin.model.PersonDetails;
 
 @Repository
 public interface PersonRepository extends JpaRepository<PersonDetails, Integer>{
+	
 
 }

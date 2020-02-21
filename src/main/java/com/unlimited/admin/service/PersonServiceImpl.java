@@ -1,15 +1,16 @@
 package com.unlimited.admin.service;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.unlimited.admin.base.PersonGeneralInformation;
 import com.unlimited.admin.dao.PersonDao;
 import com.unlimited.admin.model.PersonDetails;
 
+@Service
 public class PersonServiceImpl implements PersonService{
+	
 	@Autowired
 	PersonDao personDao;
 
@@ -24,9 +25,20 @@ public class PersonServiceImpl implements PersonService{
 	}
 
 	@Override
-	public Map<String, List<PersonDetails>> getAll() {
+	public List<PersonDetails> getAll() {
 		
 		return personDao.getAll();
+	}
+	@Override
+	public List<PersonDetails> getByScannedBy(String scannedBy) {
+		
+		return personDao.getByScannedBy(scannedBy);
+	}
+
+	@Override
+	public List<PersonDetails> getByQualificationStatus(boolean status) {
+		
+		return personDao.getByQualificationStatus(status);
 	}
 
 }

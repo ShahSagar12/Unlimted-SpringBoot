@@ -55,9 +55,6 @@ public class UnlimitedSpringBootApplication {
 					
 					state.setStateName(data[14]);
 					stateRepository.save(state);
-					
-					
-					System.out.println("State Saved");
 					person.setStateId(state);
 					
 					person.setZip(data[15]);

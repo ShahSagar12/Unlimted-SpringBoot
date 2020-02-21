@@ -8,8 +8,10 @@ import com.unlimited.admin.repository.StateRepository;
 
 @Component
 public class StateDaoImpl implements StateDao {
+	
 	@Autowired
 	StateRepository stateRepository;
+	
 	@Override
 	public State save(State state) {
 		stateRepository.save(state);

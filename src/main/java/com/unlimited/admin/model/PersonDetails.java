@@ -1,6 +1,5 @@
 package com.unlimited.admin.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import com.unlimited.admin.base.PersonGeneralInformation;
-
-import lombok.Data;
 
 
 @Entity(name="person_details")
